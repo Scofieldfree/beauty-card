@@ -1,7 +1,7 @@
 "use client";
 
 // import Image from "next/image";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { toPng } from "html-to-image";
 
 import { cn } from "@/lib/utils";
@@ -19,7 +19,7 @@ export default function Home({ className, ...props }: CardProps) {
     toPng(imageRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
-        link.download = "my-image-name.png";
+        link.download = "beauty-card.png";
         link.href = dataUrl;
         link.click();
       })
