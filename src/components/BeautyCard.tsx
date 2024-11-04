@@ -16,16 +16,6 @@ export default function BeautyCard() {
     link.download = "beauty-card.png";
     link.href = dataUrl;
     link.click();
-
-      // .then((dataUrl) => {
-      //   const link = document.createElement("a");
-      //   link.download = "beauty-card.png";
-      //   link.href = dataUrl;
-      //   link.click();
-      // })
-      // .catch((err) => {
-      //   console.log(err);
-      // });
   };
 
   return (
