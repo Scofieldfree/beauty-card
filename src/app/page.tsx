@@ -9,12 +9,10 @@ import Tiptap from "@/components/Tiptap";
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
-
-
 export default function Home() {
   const imageRef = useRef();
-    const htmlToImageConvert = () => {
-    toPng(imageRef.current, { cacheBust: false })
+  const htmlToImageConvert = () => {
+    toPng(imageRef?.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.download = "beauty-card.png";
