@@ -11,7 +11,7 @@ const Tiptap = () => {
 💡 你可以在这里输入文字尝试一下。</p>`,
   })
 
-  return <EditorContent editor={editor} />
+  return <EditorContent editor={editor} className="card-tiptap" />
 }
 
 export default Tiptap
