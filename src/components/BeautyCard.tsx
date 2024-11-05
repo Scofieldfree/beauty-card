@@ -3,7 +3,7 @@
 import React, { useRef, RefObject, useState } from "react";
 import { toPng } from "html-to-image";
 
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import Tiptap from "@/components/Tiptap";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -54,7 +54,6 @@ export default function BeautyCard() {
             <Tiptap />
           </CardContent>
         </Card>
-
       </div>
       <div className="pt-[10px]">
         <RainbowButton onClick={() => htmlToImageConvert(imageRef)}>Export Image</RainbowButton>

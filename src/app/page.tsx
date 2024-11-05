@@ -1,4 +1,3 @@
-"use client"
 import Link from "next/link";
 import BeautyCard from "@/components/BeautyCard"
 import { SparklesCore } from "@/components/ui/sparkles";
@@ -19,14 +18,14 @@ const avatarUrls = [
   "https://avatars.githubusercontent.com/u/59228569",
 ];
 
-const links = [
-  {
-    title: "Twitter",
-    icon: (
-      <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },]
+// const links = [
+//   {
+//     title: "Twitter",
+//     icon: (
+//       <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+//     ),
+//     href: "#",
+//   }]
 
 export default function Home() {
 
@@ -42,9 +41,9 @@ export default function Home() {
 
         </div>
         <BlurFade delay={0.25} inView>
-          <h3 className="md:text-2xl text-3xl lg:text-5xl font-bold text-center  relative z-20 bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
+          <h1 className="md:text-2xl text-3xl lg:text-5xl font-bold text-center  relative z-20 bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">
             Beauty Card
-          </h3>
+          </h1>
         </BlurFade>
         <BlurFade delay={0.25 * 2} inView>
           <h4 className="lg:w-[600px] md:text-base text-sm lg:text-2xl font-bold text-center  relative z-20 bg-clip-text text-transparent bg-no-repeat bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500">Create and share your beautifull sourcecode image or social media image cards</h4>
