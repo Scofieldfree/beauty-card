@@ -26,8 +26,8 @@ export default function BeautyCard() {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center border-4 border-white p-10 rounded-[10px]">
-      <div className="mb-3 flex gap-6  cursor-pointer">
+    <div className="flex flex-col justify-center items-center border-4 border-white lg:p-10 p-2 rounded-[10px]">
+      <div className="mb-3 flex flex-wrap gap-4  cursor-pointer">
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-indigo-500 via-purple-500 to-pink-500")}></div>
         <div className="bg-gradient-to-r from-cyan-500 to-blue-50 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-cyan-500 to-blue-50")}></div>
         <div className="bg-gradient-to-r  from-pink-500 to-orange-500 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-pink-500 to-orange-500")}></div>
