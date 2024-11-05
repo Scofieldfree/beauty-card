@@ -7,7 +7,9 @@ import { Button } from "@/components/ui/button";
 import Tiptap from "@/components/Tiptap";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-
+import { BorderBeam } from "@/components/ui/border-beam";
+// import PulsatingButton from "@/components/ui/pulsating-button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 
 
 export default function BeautyCard() {
@@ -52,10 +54,15 @@ export default function BeautyCard() {
             <Tiptap />
           </CardContent>
         </Card>
+
       </div>
       <div className="pt-[10px]">
-        <Button onClick={() => htmlToImageConvert(imageRef)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 hover:bg-indigo-500">Export Image</Button>
+        <RainbowButton onClick={() => htmlToImageConvert(imageRef)}>Export Image</RainbowButton>
+        {/* <Button onClick={() => htmlToImageConvert(imageRef)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 hover:bg-indigo-500">
+          Export Image
+        </Button> */}
       </div>
+      <BorderBeam size={300} duration={30} delay={3} colorFrom="#E94057" colorTo="#F27121" />
     </div >
   );
 }
