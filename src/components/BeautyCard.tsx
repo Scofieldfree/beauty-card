@@ -9,11 +9,12 @@ import Tiptap from "@/components/Tiptap";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 
+
 export default function BeautyCard() {
   const imageRef = useRef<HTMLDivElement | null>(null);
   const [bgColor, setBgColor] = useState<string>("bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500")
   async function htmlToImageConvert(imageRef: RefObject<HTMLDivElement | null>) {
-    const dataUrl = await toPng(imageRef.current, { cacheBust: false })
+    const dataUrl = await toPng(imageRef.current, { cacheBust: false, quality: 0.95 })
     const link = document.createElement("a");
     link.download = "beauty-card.png";
     link.href = dataUrl;
@@ -25,8 +26,8 @@ export default function BeautyCard() {
   }
 
   return (
-    <div className="">
-      <div className="mb-3 flex gap-6  scroll-smooth cursor-pointer">
+    <div className="flex flex-col justify-center items-center border-4 border-white p-10 rounded-[10px]">
+      <div className="mb-3 flex gap-6  cursor-pointer">
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-indigo-500 via-purple-500 to-pink-500")}></div>
         <div className="bg-gradient-to-r from-cyan-500 to-blue-50 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-cyan-500 to-blue-50")}></div>
         <div className="bg-gradient-to-r  from-pink-500 to-orange-500 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-pink-500 to-orange-500")}></div>
@@ -38,8 +39,8 @@ export default function BeautyCard() {
         <div className="bg-gradient-to-r  from-[#9795f0] to-[#fbc8d4] w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-[#9795f0] to-[#fbc8d4]")}></div>
         <div className="bg-gradient-to-r  from-[#fddb92] to-[#d1fdff] w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-[#fddb92] to-[#d1fdff]")}></div>
       </div>
-      <div className={`p-[30px] w-[420px] rounded-[8px]  text-black bg-gradient-to-r  ${bgColor}`} ref={imageRef}>
-        <Card className=" rounded-[16px]  shadow-2xl opacity-75">
+      <div className={`p-[30px] lg:w-[420px] rounded-[8px]  text-black bg-gradient-to-r  ${bgColor}`} ref={imageRef}>
+        <Card className="rounded-[16px]  shadow-2xl opacity-75">
           <CardHeader>
             <CardTitle>
               <div contentEditable={true} className="p-2 pl-0">beauty card</div>
@@ -51,7 +52,7 @@ export default function BeautyCard() {
           </CardContent>
         </Card>
       </div>
-      <div className="w-[200px] pt-[10px]">
+      <div className="pt-[10px]">
         <Button onClick={() => htmlToImageConvert(imageRef)} className="bg-indigo-500 shadow-lg shadow-indigo-500/50 hover:bg-indigo-500">Export Image</Button>
       </div>
     </div >
