@@ -14,7 +14,8 @@ export default function BeautyCard() {
   const imageRef = useRef<HTMLDivElement | null>(null);
   const [bgColor, setBgColor] = useState<string>("bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500")
   async function htmlToImageConvert(imageRef: RefObject<HTMLDivElement | null>) {
-    const dataUrl = await toPng(imageRef.current, { cacheBust: false, quality: 0.95 })
+    const dataUrl = await toPng(imageRef.current, { cacheBust: false, pixelRatio: 2 })
+    console.log({ dataUrl })
     const link = document.createElement("a");
     link.download = "beauty-card.png";
     link.href = dataUrl;

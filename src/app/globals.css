@@ -67,8 +67,8 @@
     @apply bg-background text-foreground;
   }
 }
-.card-tiptap {
-  /* line-height: 30px; */
+.card-tiptap p {
+  line-height: 160%;;
 }
 :foucs-visiable {
   outline-style: none
