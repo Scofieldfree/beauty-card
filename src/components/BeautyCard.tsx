@@ -44,9 +44,9 @@ export default function BeautyCard() {
         <Card className="rounded-[16px]  shadow-2xl opacity-75">
           <CardHeader>
             <CardTitle>
-              <div contentEditable={true} className="p-2 pl-0">beauty card</div>
+              <div contentEditable={true} className="p-2 pl-0">Beauty card</div>
             </CardTitle>
-            <CardDescription contentEditable={true}>You have 3 unread messages.</CardDescription>
+            <CardDescription contentEditable={true}>Quick create your image card and share it easy.</CardDescription>
           </CardHeader>
           <CardContent className="grid gap-4">
             <Tiptap />
