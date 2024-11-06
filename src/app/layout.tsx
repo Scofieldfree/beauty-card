@@ -17,7 +17,12 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Beauty Card | Create and share beautifull card image of your sourcecode",
-  description: "Create beautiful cards and share them with one click",
+  description: "Create and share stunning source code and social media image cards effortlessly with Beauty Card. Make your notes visually appealing!",
+  keywords: ['beauty card', 'create image card', 'share sourcecode image', 'social media image cards', 'quick image creation', 'beautiful card image', 'online image sharing', 'sourcecode visualization'],
+  metadataBase: new URL('https://www.beauty-card.com'),
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
