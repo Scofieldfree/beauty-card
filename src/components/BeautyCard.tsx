@@ -7,12 +7,24 @@ import { toPng } from "html-to-image";
 import Tiptap from "@/components/Tiptap";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-// import { BorderBeam } from "@/components/ui/border-beam";
+import { BorderBeam } from "@/components/ui/border-beam";
 // import PulsatingButton from "@/components/ui/pulsating-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 // import { Slider } from "@/components/ui/slider"
+// import FontFamily from '@tiptap/extension-font-family';
+
+// import {
+//   Select,
+//   SelectContent,
+//   SelectGroup,
+//   SelectItem,
+//   // SelectLabel,
+//   SelectTrigger,
+//   SelectValue,
+// } from "@/components/ui/select"
 
 export default function BeautyCard() {
+  // const [fontValue, setFontValue] = useState('')
   const imageRef = useRef<HTMLDivElement | null>(null);
   // const [sliderValue, setSliderValue] = useState([5])
   const [bgColor, setBgColor] = useState<string>("bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500")
@@ -29,12 +41,33 @@ export default function BeautyCard() {
     setBgColor(theme)
   }
 
+  // const handleFontChange = (value: string) => {
+  //   console.log({ value })
+  // }
+
   // const handleValueChange = (value: number[]) => {
   //   console.log({ value })
   // }
 
   return (
     <div className="flex flex-col justify-center items-center border-4 border-white lg:p-10 p-2 rounded-[10px]">
+      {/* <div className="w-full flex flex-start">
+        <div className="text-white flex justify-center items-center">Font</div>
+        <Select onValueChange={(value) => handleFontChange(value)} value={fontValue}>
+          <SelectTrigger className="w-[180px] m-2 ml-0 bg-black text-[#F27121]">
+            <SelectValue placeholder="Select a fontfamily" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectGroup>
+              <SelectItem value="Inter">Inter</SelectItem>
+              <SelectItem value="Comic Sans MS, Comic Sans">Comic Sans</SelectItem>
+              <SelectItem value="serif">Serif</SelectItem>
+              <SelectItem value="monospace">Monospace</SelectItem>
+              <SelectItem value="cursive">Cursive</SelectItem>
+            </SelectGroup>
+          </SelectContent>
+        </Select>
+      </div> */}
       <div className="mb-3 flex flex-wrap gap-4 justify-center cursor-pointer">
         <div className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-indigo-500 via-purple-500 to-pink-500")}></div>
         <div className="bg-gradient-to-r from-cyan-500 to-blue-50 w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-cyan-500 to-blue-50")}></div>
@@ -74,7 +107,7 @@ export default function BeautyCard() {
           Export Image
         </Button> */}
       </div>
-      {/* <BorderBeam size={300} duration={30} delay={3} colorFrom="#E94057" colorTo="#F27121" /> */}
+      <BorderBeam size={300} duration={30} delay={3} colorFrom="#E94057" colorTo="#F27121" />
     </div >
   );
 }
