@@ -17,6 +17,12 @@ dependencies:
   '@tiptap/extension-bubble-menu':
     specifier: ^2.9.1
     version: 2.9.1(@tiptap/core@2.9.1)(@tiptap/pm@2.9.1)
+  '@tiptap/extension-color':
+    specifier: ^2.9.1
+    version: 2.9.1(@tiptap/core@2.9.1)(@tiptap/extension-text-style@2.9.1)
+  '@tiptap/extension-text-style':
+    specifier: ^2.9.1
+    version: 2.9.1(@tiptap/core@2.9.1)
   '@tiptap/pm':
     specifier: ^2.9.1
     version: 2.9.1
@@ -776,6 +782,16 @@ packages:
       '@tiptap/core': ^2.7.0
     dependencies:
       '@tiptap/core': 2.9.1(@tiptap/pm@2.9.1)
+    dev: false
+
+  /@tiptap/extension-color@2.9.1(@tiptap/core@2.9.1)(@tiptap/extension-text-style@2.9.1):
+    resolution: {integrity: sha512-9h4FcCDenOmr8x8/Vfzg9PBYrgXIXTi2x8JiaTbrQX+Ufea1SMx+Ko/Vowp7SGMnBAsB+sXkTVhAhiXDQbtWcQ==}
+    peerDependencies:
+      '@tiptap/core': ^2.7.0
+      '@tiptap/extension-text-style': ^2.7.0
+    dependencies:
+      '@tiptap/core': 2.9.1(@tiptap/pm@2.9.1)
+      '@tiptap/extension-text-style': 2.9.1(@tiptap/core@2.9.1)
     dev: false
 
   /@tiptap/extension-document@2.9.1(@tiptap/core@2.9.1):
