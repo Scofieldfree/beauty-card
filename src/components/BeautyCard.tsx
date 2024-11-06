@@ -10,7 +10,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { BorderBeam } from "@/components/ui/border-beam";
 // import PulsatingButton from "@/components/ui/pulsating-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-
+import { Slider } from "@/components/ui/slider"
 
 export default function BeautyCard() {
   const imageRef = useRef<HTMLDivElement | null>(null);
@@ -28,6 +28,10 @@ export default function BeautyCard() {
     setBgColor(theme)
   }
 
+  const handleValueChange = (value: number[]) => {
+    console.log({ value })
+  }
+
   return (
     <div className="flex flex-col justify-center items-center border-4 border-white lg:p-10 p-2 rounded-[10px]">
       <div className="mb-3 flex flex-wrap gap-4 justify-center cursor-pointer">
@@ -42,6 +46,13 @@ export default function BeautyCard() {
         <div className="bg-gradient-to-r  from-[#9795f0] to-[#fbc8d4] w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-[#9795f0] to-[#fbc8d4]")}></div>
         <div className="bg-gradient-to-r  from-[#fddb92] to-[#d1fdff] w-[40px] h-[40px] rounded" onClick={() => changeTheme("from-[#fddb92] to-[#d1fdff]")}></div>
       </div>
+      <Slider
+        defaultValue={[5]}
+        onValueChange={handleValueChange}
+        max={10}
+        step={.5}
+        className="w-[60%] p-2"
+      />
       <div className={`p-[30px] lg:w-[420px] rounded-[8px]  text-black bg-gradient-to-r  ${bgColor}`} ref={imageRef}>
         <Card className="rounded-[16px]  shadow-2xl opacity-75">
           <CardHeader>
