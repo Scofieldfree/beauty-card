@@ -7,7 +7,7 @@ import { toPng } from "html-to-image";
 import Tiptap from "@/components/Tiptap";
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { BorderBeam } from "@/components/ui/border-beam";
+// import { BorderBeam } from "@/components/ui/border-beam";
 // import PulsatingButton from "@/components/ui/pulsating-button";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 // import { Slider } from "@/components/ui/slider"
@@ -74,7 +74,7 @@ export default function BeautyCard() {
           Export Image
         </Button> */}
       </div>
-      <BorderBeam size={300} duration={30} delay={3} colorFrom="#E94057" colorTo="#F27121" />
+      {/* <BorderBeam size={300} duration={30} delay={3} colorFrom="#E94057" colorTo="#F27121" /> */}
     </div >
   );
 }
