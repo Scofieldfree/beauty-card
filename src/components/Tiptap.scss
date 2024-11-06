@@ -2,7 +2,7 @@
 .card-tiptap {
   .tiptap {
     :first-child {
-      margin-top: 0;
+      margin-top: 6px;
     }
 
     /* List styles */
@@ -88,6 +88,10 @@
       border: none;
       border-top: 1px solid var(--gray-2);
       margin: 2rem 0;
+    }
+    p {
+      // font-size: 16px;
+      margin-bottom: 10px;
     }
   }
 }

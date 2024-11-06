@@ -17,8 +17,12 @@ const Tiptap = (props: any) => {
   console.log({ props })
   const editor = useEditor({
     extensions: [StarterKit, TextStyle, FontFamily],
-    content: `<p>👋 hi! Sounds like a 🎨  Beauty Card is a great tool! By generating beautiful text cards, it can make your reading notes, memos, and reminders more visually appealing and easy to share.
-💡 You can try entering some text to see how it looks. Please feel free to share your needs and I can help you improve the content and make your card more attractive!</p>`,
+    content: `
+    <h1>👋 hi!</h1>
+    <p> Sounds like a 🎨  Beauty Card is a great tool! By generating beautiful text cards, it can make your reading notes, memos, and reminders more visually appealing and easy to share.
+</p>
+<p>💡 You can try entering some text to see how it looks. Please feel free to share your needs and I can help you improve the content and make your card more attractive!</p>
+`,
   })
 
   // const menuClick = (type: string) => {

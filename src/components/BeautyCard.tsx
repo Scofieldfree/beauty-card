@@ -88,7 +88,7 @@ export default function BeautyCard() {
         step={.5}
         className="w-[60%] p-2"
       /> */}
-      <div className={`p-[30px] lg:w-[420px] rounded-[8px]  text-black bg-gradient-to-r  ${bgColor}`} ref={imageRef}>
+      <div className={`p-[30px] lg:w-[600px] rounded-[8px]  text-black bg-gradient-to-r  ${bgColor}`} ref={imageRef}>
         <Card className="rounded-[16px]  shadow-2xl opacity-75">
           <CardHeader>
             <CardTitle>
