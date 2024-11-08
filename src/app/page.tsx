@@ -11,6 +11,8 @@ import {
   IconBrandX,
 } from "@tabler/icons-react";
 
+import { FooterLink } from "@/components/FooterLink"
+
 const avatarUrls = [
   "https://avatars.githubusercontent.com/u/16860528",
   "https://avatars.githubusercontent.com/u/20110627",
@@ -65,7 +67,7 @@ export default function Home() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
         <BeautyCard />
-        <div className="w-full flex justify-center items-center">
+        <div className="w-full  flex justify-center items-center">
           <Link
             href="https://x.com/scofieldfee"
             key="Twitter"
@@ -73,7 +75,9 @@ export default function Home() {
           >
             <div className="h-4 w-4"><IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" /></div>
           </Link>
-          <AvatarCircles numPeople={99} avatarUrls={avatarUrls} /></div>
+          <AvatarCircles numPeople={99} avatarUrls={avatarUrls} />
+        </div>
+        <FooterLink></FooterLink>
       </div>
     </BackgroundBeamsWithCollision >
   );

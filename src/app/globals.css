@@ -83,3 +83,13 @@
 :foucs-visiable {
   outline-style: none
 }
+
+/* data-radix-popper-content-wrapper {
+  z-index: 99!important
+} */
+
+.footer-link {
+  [data-radix-popper-content-wrapper] {
+    z-index: 99 !important;
+ }
+}
