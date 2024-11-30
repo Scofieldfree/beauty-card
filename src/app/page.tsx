@@ -20,15 +20,6 @@ const avatarUrls = [
   "https://avatars.githubusercontent.com/u/59228569",
 ];
 
-// const links = [
-//   {
-//     title: "Twitter",
-//     icon: (
-//       <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-//     ),
-//     href: "#",
-//   }]
-
 export default function Home() {
 
   return (
