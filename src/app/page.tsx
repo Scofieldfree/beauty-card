@@ -4,8 +4,6 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-with-collision";
 import BlurFade from "@/components/ui/blur-fade";
 import AvatarCircles from "@/components/ui/avatar-circles";
-// import { ClientTweetCard } from "@/components/ClientTwitterCard";
-// import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   // IconBrandGithub,
   IconBrandX,
